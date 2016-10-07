@@ -54,11 +54,23 @@
     <Compile Include="FormCRUDConstructeur.designer.cs">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDJeuxVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDJeuxVideo.Designer.cs">
+      <DependentUpon>FormCRUDJeuxVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDSupport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCRUDSupport.designer.cs">
       <DependentUpon>FormCRUDSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCRUDUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDUsers.Designer.cs">
+      <DependentUpon>FormCRUDUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGestion.cs">
       <SubType>Form</SubType>
@@ -78,8 +90,14 @@
     <EmbeddedResource Include="FormCRUDConstructeur.resx">
       <DependentUpon>FormCRUDConstructeur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDJeuxVideo.resx">
+      <DependentUpon>FormCRUDJeuxVideo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDSupport.resx">
       <DependentUpon>FormCRUDSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDUsers.resx">
+      <DependentUpon>FormCRUDUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestion.resx">
       <DependentUpon>FormGestion.cs</DependentUpon>

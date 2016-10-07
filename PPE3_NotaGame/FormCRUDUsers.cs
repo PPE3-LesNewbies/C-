@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace PPE3_NotaGame
 {
-    /// <summary>
-    /// FormCRUDConstructeur : feuille qui permet la gestion Ajout/modification d'un constructeur de jeux vidéos
-    /// </summary>
-    public partial class FormCRUDConstructeur : Form
+    public partial class FormCRUDUsers : Form
     {
+        private char c = 'c';
+        private int indice = -1;
+
         /// <summary>
         /// Constructeur FormCRUDConstructeur
         /// </summary>
-        public FormCRUDConstructeur()
+        /// /// <param name="action">c : en creation, u : en update</param>
+        /// <param name="ind">indice du support sélectionné en cas d'update</param>
+        public FormCRUDUsers(char action, int ind)
         {
             InitializeComponent();
-        }
-
-        private void FormCRUDConstructeur_Load(object sender, EventArgs e)
-        {
-
+            c = action;
+            indice = ind;
         }
     }
 }

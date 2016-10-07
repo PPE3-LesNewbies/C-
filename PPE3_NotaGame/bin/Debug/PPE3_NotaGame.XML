@@ -33,6 +33,20 @@
             <param name="c">définit l'action : c:create, u update, d delete </param>
             <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
         </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_jeuxvideos(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table Jeux vidéos
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete </param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
+        <member name="M:PPE3_NotaGame.Controleur.crud_users(System.Char,System.Int32)">
+            <summary>
+            permet le crud sur la table users
+            </summary>
+            <param name="c">définit l'action : c:create, u update, d delete </param>
+            <param name="indice">indice de l'élément sélectionné à modifier ou supprimer, -1 si ajout</param>
+        </member>
         <member name="T:PPE3_NotaGame.FormCRUDConstructeur">
             <summary>
             FormCRUDConstructeur : feuille qui permet la gestion Ajout/modification d'un constructeur de jeux vidéos
@@ -65,6 +79,42 @@
             propriété TbNom de type TextBox : Nom du constructeur
             </summary>
         </member>
+        <member name="T:PPE3_NotaGame.FormCRUDJeuxVideo">
+            <summary>
+            FormCRUDjeuxVideos : feuille qui permet la gestion Ajout/modification d'un jeux vidéo
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxVideo.#ctor(System.Char,System.Int32)">
+            <summary>
+            Constructeur FormCRUDConstructeur
+            </summary>
+            /// <param name="action">c : en creation, u : en update</param>
+            <param name="ind">indice du support sélectionné en cas d'update</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxVideo.FormCRUD_Load(System.Object,System.EventArgs)">
+            <summary>
+            Chargement de FormCRUD : remplissage de la comboBox des constructeurs
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDJeuxVideo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxVideo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDJeuxVideo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:PPE3_NotaGame.FormCRUDSupport">
             <summary>
             FormCRUDSupport : form permettant l'ajout/modification d'un support
@@ -76,13 +126,6 @@
             </summary>
             <param name="action">c : en creation, u : en update</param>
             <param name="ind">indice du support sélectionné en cas d'update</param>
-        </member>
-        <member name="M:PPE3_NotaGame.FormCRUDSupport.FormCRUD_Load(System.Object,System.EventArgs)">
-            <summary>
-            Chargement de FormCRUD : remplissage de la comboBox des constructeurs
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="F:PPE3_NotaGame.FormCRUDSupport.components">
             <summary>
@@ -119,6 +162,30 @@
         <member name="P:PPE3_NotaGame.FormCRUDSupport.TbCaract">
             <summary>
             propriété TbCaract de type TextBox : caractéristiques du support
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUsers.#ctor(System.Char,System.Int32)">
+            <summary>
+            Constructeur FormCRUDConstructeur
+            </summary>
+            /// <param name="action">c : en creation, u : en update</param>
+            <param name="ind">indice du support sélectionné en cas d'update</param>
+        </member>
+        <member name="F:PPE3_NotaGame.FormCRUDUsers.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUsers.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PPE3_NotaGame.FormCRUDUsers.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="T:PPE3_NotaGame.FormGestion">
@@ -261,6 +328,8 @@
             indice 1 : Table Constructeur
             indice 2 : Table Support avec jointure pour récupérer tous les libellés
             indice 3 : Table Support
+            indice 4 : Table Jeux vidéos
+            indice 5 : Table users
             </summary>
         </member>
         <member name="M:PPE3_NotaGame.Modele.seconnecter">

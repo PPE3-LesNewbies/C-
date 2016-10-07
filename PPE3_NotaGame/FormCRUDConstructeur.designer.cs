@@ -83,7 +83,7 @@
             this.Controls.Add(this.tbNom);
             this.Name = "FormCRUDConstructeur";
             this.Text = "Ajouter/Modifier/Supprimer : table CONSTRUCTEUR";
-
+            this.Load += new System.EventHandler(this.FormCRUDConstructeur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

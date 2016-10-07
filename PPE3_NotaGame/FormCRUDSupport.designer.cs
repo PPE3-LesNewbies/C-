@@ -162,7 +162,7 @@
             this.Controls.Add(this.tbNom);
             this.Name = "FormCRUDSupport";
             this.Text = "Ajout/Modification/Suppression de SUPPORT";
-            this.Load += new System.EventHandler(this.FormCRUD_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

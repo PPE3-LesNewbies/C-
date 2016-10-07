@@ -31,27 +31,6 @@ namespace PPE3_NotaGame
             
         }
 
-        /// <summary>
-        /// Chargement de FormCRUD : remplissage de la comboBox des constructeurs
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormCRUD_Load(object sender, EventArgs e)
-        {
-            // chargement des noms des constructeurs dans la comboBox
-            cbConstructeur.Items.Clear();
-            Controleur.Vmodele.charger_donnees("constructeur");
-            if (Controleur.Vmodele.Chargement)
-            {
-                // parcours du DataTable des constructeurs pour remplir la comboBox
-                for (int i = 0; i < Controleur.Vmodele.DT[1].Rows.Count; i++)
-                {
-                    cbConstructeur.Items.Add(Controleur.Vmodele.DT[1].Rows[i]["NomC"].ToString());
-                }
-
-            }
-            // si update : affichage du constructeur correspondant
-            if (c == 'u') CbConstructeur.SelectedItem = Controleur.Vmodele.DT[2].Rows[indice][4]; 
-        }
+        
     }
 }

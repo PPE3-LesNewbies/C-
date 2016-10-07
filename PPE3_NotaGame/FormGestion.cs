@@ -79,6 +79,28 @@ namespace PPE3_NotaGame
                         dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année_Sortie";
                        
                     }
+                    else if (table == "jeuxvideos")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDJV"].HeaderText = "Id Jeux vidéos";
+                        dGvJeux.Columns["NOMJV"].HeaderText = "Nom_Jeux";
+                        dGvJeux.Columns["ANNEESORTIE"].HeaderText = "Année de Sortie";
+                        dGvJeux.Columns["CLASSIFICATION"].HeaderText = "Classification";
+                        dGvJeux.Columns["EDITEUR"].HeaderText = "Editeur";
+                        dGvJeux.Columns["DESCRIPTION"].HeaderText = "Description";
+
+                    }
+                    else if (table == "users")
+                    {
+                        bindingSource1.DataSource = Controleur.Vmodele.DT[5];
+                        dGvJeux.DataSource = bindingSource1;
+                        dGvJeux.Columns["IDU"].HeaderText = "Id users";
+                        dGvJeux.Columns["EMAIL"].HeaderText = "Email";
+                        dGvJeux.Columns["PSEUDO"].HeaderText = "Pseudo";
+                        dGvJeux.Columns["COMMUNAUTE"].HeaderText = "Communauté";
+                        dGvJeux.Columns["MotDePasse"].HeaderText = "Mot de passe";
+                    }
 
                     // mise à jour du dataGridView via le bindingSource rempli par le DataTable
                     dGvJeux.Refresh();
@@ -110,6 +132,8 @@ namespace PPE3_NotaGame
               
                 if (table == "constructeur") Controleur.crud_constructeur('c', -1);
                 if (table == "support") Controleur.crud_support('c', -1);
+                if (table == "jeuxvideos") Controleur.crud_jeuxvideos('c', -1);
+                if (table == "users") Controleur.crud_users('c', -1);
             }
             else
             {
@@ -123,6 +147,8 @@ namespace PPE3_NotaGame
                        
                         if (table == "constructeur") Controleur.crud_constructeur('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                         if (table == "support") Controleur.crud_support('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "users") Controleur.crud_users('u', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
@@ -131,6 +157,9 @@ namespace PPE3_NotaGame
                        
                         if (table == "constructeur") Controleur.crud_constructeur('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
                         if (table == "support") Controleur.crud_support('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "jeuxvideos") Controleur.crud_jeuxvideos('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                        if (table == "users") Controleur.crud_users('d', Convert.ToInt32(dGvJeux.SelectedRows[0].Index));
+                    
                     }
                    
                 }
@@ -146,6 +175,11 @@ namespace PPE3_NotaGame
             bindingSource1.MoveLast();
             bindingSource1.MoveFirst();
             dGvJeux.Refresh();
+        }
+
+        private void dGvJeux_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

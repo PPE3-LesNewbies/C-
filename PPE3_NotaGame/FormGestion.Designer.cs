@@ -80,6 +80,7 @@
             this.dGvJeux.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGvJeux.Size = new System.Drawing.Size(420, 150);
             this.dGvJeux.TabIndex = 1;
+            this.dGvJeux.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGvJeux_CellContentClick);
             // 
             // contextMenuStrip1
             // 
